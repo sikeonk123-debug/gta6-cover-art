@@ -6,6 +6,14 @@
 
 An offline browser web app that turns a photo and a caption into multi-panel sunset-neon cover art, exported as a PNG to share. Six layouts (four panels, hero + three, full bleed, nine grid, tilted snaps, split duo), per-panel photos with drag-to-pan and zoom crop, five gradient-map grades (Sunset, Neon, Vice, Heat, Mono), Anton title lettering with a Pacifico script subtitle, grain and vignette, and one-click PNG export in 1080 × 1080, 1080 × 1350, 1920 × 1080 and 1080 × 1920 — with undo and redo. Everything is its own: no Rockstar logo, artwork or font; the fonts are Anton and Pacifico under the SIL Open Font License, vendored under `app/fonts/`.
 
+## How it works
+
+1. Pick a layout — six to choose from, from a four-panel grid to a nine-panel grid with a centre title block.
+2. Pick a grade — five gradient-map grades (Sunset, Neon, Vice, Heat, Mono) set the whole poster's mood.
+3. Drop a photo into each panel, then drag to pan and scroll to zoom until the crop feels right.
+4. Write the title in bold Anton lettering and a script subtitle in Pacifico, plus an optional badge line.
+5. Export the cover as a PNG — 1080 × 1080, 1080 × 1350, 1920 × 1080 or 1080 × 1920 — one size or all four at once. Undo and redo are always there if a change doesn't land.
+
 ## Try it
 
 ```sh
