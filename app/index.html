@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Coast Cover Studio</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Neon Coast <span>Cover Studio</span></h1>
+  <p>Turn a photo and a caption into a sunset-neon poster — offline, in your browser. Photos never leave your machine.</p>
+</header>
+<main class="app">
+  <section class="stage">
+    <canvas id="cover" width="720" height="720" aria-label="The cover preview"></canvas>
+    <p class="hint">Click a panel to select it · drag to move its photo · scroll to zoom · <span id="sizeLabel">1080 × 1080</span></p>
+  </section>
+  <aside class="controls">
+    <section>
+      <h2>Layout</h2>
+      <div class="row" id="layoutRow"></div>
+    </section>
+    <section>
+      <h2>Grade</h2>
+      <div class="row" id="gradeRow"></div>
+    </section>
+    <section>
+      <h2>Panels</h2>
+      <div class="row" id="panelList"></div>
+      <div class="row thumbs" id="photoList"></div>
+      <div class="row">
+        <label class="file">Add photo <input id="addPhoto" type="file" accept="image/*" multiple></label>
+        <button id="fillAll" type="button">Fill all panels</button>
+        <button id="resetCrop" type="button">Reset crop</button>
+      </div>
+      <label>Zoom <input id="zoom" type="range" min="1" max="4" step="0.05" value="1"> <span id="zoomVal">100%</span></label>
+      <label>Move left–right <input id="panX" type="range" min="-0.5" max="0.5" step="0.01" value="0"></label>
+      <label>Move up–down <input id="panY" type="range" min="-0.5" max="0.5" step="0.01" value="0"></label>
+    </section>
+    <section>
+      <h2>Caption</h2>
+      <label>Title <input id="title" type="text" maxlength="40" value="Sunset Heist"></label>
+      <label>Script subtitle <input id="subtitle" type="text" maxlength="40" value="neon coast"></label>
+      <label>Badge <input id="badge" type="text" maxlength="16" value="NEON COAST"></label>
+    </section>
+    <section>
+      <h2>Export size</h2>
+      <div class="row" id="sizeRow"></div>
+      <div class="row">
+        <button id="export" type="button" class="primary">Export PNG</button>
+        <button id="exportAll" type="button">Export all 4 sizes</button>
+        <button id="undo" type="button" disabled>Undo</button>
+        <button id="redo" type="button" disabled>Redo</button>
+      </div>
+      <p id="status" role="status"></p>
+    </section>
+  </aside>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
